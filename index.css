@@ -1,0 +1,373 @@
+#main{
+  border: 1px solid;
+  height: 900px;
+  width: 1200px;
+  margin: auto;
+	margin-top: 20px;
+	font-size: 11pt;	
+	font-family: minion;
+	line-height: 150%;	
+}
+
+#header{
+	position: relative;
+	padding: 10px;
+	height: 80px;		
+}
+
+#title{			
+	font-family: bauer;
+	font-size: 23pt;
+	line-height: 80px;
+	margin-left: 50px;		
+}
+
+#title:hover{
+	cursor: pointer;
+}
+
+#main1{	
+	width: 100%;			
+	height: 790px;
+	background-image: url('img/backgr.jpg');
+	background-size: 100% 100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+#purple{
+	position: relative;
+	padding: 30px;
+	margin-right: 0;
+	margin-left: 0;
+	height: 370px;
+	background-color: #8984AA;
+	opacity: 0.5;
+	
+}
+
+.purpleBack{
+	width: 100px;
+	background-color:	#8984AA;	
+}
+
+.invisible{
+	display: none;
+}
+
+.navig{
+	text-decoration: none;	
+	color: white;	
+	font-size: 14pt;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+.navig:hover{
+	cursor: pointer;
+}
+
+@font-face {
+	font-family: minion;
+	src: url("fonts/MinionPro-Regular.otf");
+}
+
+@font-face{
+	font-family: bauer;
+	src: url("fonts/bauerb.ttf");
+}
+
+#language{	
+	font-family: minion;
+	font-size: 12pt;			
+	position: absolute;		
+	right: 0;
+}
+
+#serv table{
+	position: absolute;
+	bottom: -100px;
+	width: 1140px;
+	table-layout: fixed;
+}
+
+#serv table td{	
+	text-align: center;
+}
+
+.divCap{			
+	display: inline-block;
+	border: 3px solid rgba(128, 128, 128, 0.2);	
+	line-height: 240px;	
+	width: 240px;	
+	height: 240px;
+	background-color: rgba(128, 128, 128, 0.5);	
+	border-radius: 50%;		
+	bottom: 0;
+	z-index: 1;
+	text-align: center;	
+}
+
+.capText{		
+	text-align: left;
+	display: none;
+	z-index: 2;
+	position: absolute;
+}
+
+
+#lcapText{	
+	top: 100px;	
+	right: 5%;
+	width: 50%;	
+}
+
+#mcapText{
+	top: 100px;	
+	left: 5%;
+	width: 50%;
+}
+
+#rcapText{	
+	position: absolute;
+	top: 100px;
+	width: 30%;	
+	left: 35%;
+}
+
+/*eInsight*/
+
+#text{				
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	top: 100px;	
+}
+
+#table1{
+	margin: 0 auto;	
+	width: 70%;	
+}
+
+#table1 td{
+	text-align: center;
+}
+
+#table2{
+	font-size: 11pt;
+	margin-top: 6px;
+}
+
+#table2 td{	
+	width: 33%;	
+	text-align: left;
+	vertical-align: top;
+}
+
+.inTable1{
+	margin-right: 10px;
+}
+.inTable2{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.inTable3{
+	margin-left: 10px;
+}
+
+.circle{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	border-radius: 50%;
+	background-color: white;
+	text-align: center;	
+}
+
+.circle:hover{
+	cursor: pointer;
+}
+
+table{
+	font-size: 11pt;
+	line-height: 150%;
+}
+
+#tabStr1{
+	position: absolute;
+	top: 89px;
+	left: 30%;
+	width: 65%;		
+	line-height: 150%;
+}
+
+#tabStr1 td{
+	width: 33%;
+}
+
+#imgStr1{
+	position: absolute;
+	left: 5%;
+	top: 100px;
+	width: 20%;
+	height: 30%;		
+}
+
+#imgStr1:hover{
+	cursor: pointer;
+}
+
+#imgStr2{
+	position: absolute;
+	left: 5%;
+	top: 100px;
+	width: 20%;
+	height: 30%;	
+	z-index: 1;
+}
+
+#imgStr2:hover{
+	cursor: pointer;
+}
+
+#tabStr2{
+	position: absolute;
+	top: 97px;	
+	left: 5%;
+	width: 95%;	
+	line-height: 150%;	
+}
+
+#td1tabStr2{
+	margin-top: 400px;
+}
+
+#tabStr2 td{
+	vertical-align: top;
+	width: 33%;
+}
+
+#imgStr3{
+	position: absolute;
+	left: 5%;
+	top: 100px;
+	width: 20%;
+	height: 30%;	
+}
+
+#imgStr3:hover{
+	cursor: pointer;
+}
+
+#tabStr3{
+	position: absolute;
+	top: 97px;			
+	left: 30%;
+	width: 65%;		
+}
+
+#tabStr3 td{
+	vertical-align: top;
+	width: 33%;
+}
+
+/* innovation */
+
+#inno table{	
+	position: absolute;
+	top: 97px;
+	left: 5%;	
+	width: 90%;	
+}
+
+#inno table td{
+	vertical-align: top;
+}
+
+#td1{
+	width: 70%;
+}
+
+#td1 div{
+	margin-right: 30%;
+}
+
+#td2{
+	width: 30%;	
+}
+
+#td2 div{	
+	position: absolute;
+	right: 0;
+}
+
+/* career */
+
+#career table{	
+	position: absolute;	
+	top: 97px;
+	left: 15%;
+	width: 70%;	
+}
+
+#career table div{
+	font-family: minion;
+	font-size: 13pt;	
+	background-color: #555;
+	text-align: center;
+}
+
+/* contact */
+
+#cont table{		
+	margin: 42px auto;
+}
+
+#submiTd{
+	position:relative;
+}
+
+textarea{
+	height: 100px;
+	max-height: 100px;
+}
+
+.butWid{
+	position: absolute;
+	width: 50px;
+	right: 0;
+}
+
+.nButWid{
+	width: 300px;	
+}
+
+#cont p{	
+	text-align: center;
+}
+
+/* team */
+
+#team{
+	position: absolute;
+	left: 60px;
+	right: 60px;
+	top: 100px;
+}
+
+#bot{
+	margin-top: 580px;
+}
+
+#mapdiv{
+	width: 1080px; 
+	height: 400px; 
+	background-color:#eeeeee; 
+	position: absolute;
+	left: 0;	
+	margin-top: 10px;
+}
