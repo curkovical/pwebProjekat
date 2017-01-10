@@ -140,6 +140,14 @@ $(document).ready(function(){
 				}
 								
 			});
+				
+			$('#lcap').hover(function(){
+				$('#lcap').css('cursor', 'pointer');
+			});
+			$('#mcap').hover(function(){
+				$('#mcap').css('cursor', 'pointer');
+			});
+	
 			
 			$('#mcap').click(function(){						
 				$('#lcap').toggle();								
