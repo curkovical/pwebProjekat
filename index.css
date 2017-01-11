@@ -186,11 +186,9 @@ a{
 	border-radius: 50%;
 	background-color: white;
 	text-align: center;	
-}
-
-.circle:hover{
 	cursor: pointer;
 }
+
 
 table{
 	font-size: 11pt;
@@ -199,7 +197,7 @@ table{
 
 #tabStr1{
 	position: absolute;
-	top: 89px;
+	top: 100px;
 	left: 30%;
 	width: 65%;		
 	line-height: 150%;
@@ -279,7 +277,7 @@ table{
 
 #inno table{	
 	position: absolute;
-	top: 97px;
+	top: 102px;
 	left: 5%;	
 	width: 90%;	
 }
