@@ -2,7 +2,7 @@ $(document).ready(function(){
 			var i=0, j=0, k=0;
 			
 			$('#title').click(function(){
-				$('#main1').css('background-image','url("backgr.jpg")');
+				$('#main1').css('background-image','url("img/backgr.jpg")');
 				$('#serv').hide();
 				$('#team').hide();
 				$('#eIns').hide();				
