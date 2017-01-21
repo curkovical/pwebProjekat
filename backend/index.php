@@ -457,7 +457,7 @@
 				<div role="tabpanel" class="tab-pane <?php if(!isset($_GET['selected']) || $_GET['selected'] == 'team') echo 'active'; ?>" id="team">
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModalAdd">ADD</button>
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModalUpdate">UPDATE</button>
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModalDelete">DELTE</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModalDelete">DELETE</button>
 					<table class="table table-responsive">
 						<thead>
 							<th>Team name</th>
