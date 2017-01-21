@@ -2,24 +2,21 @@
 	session_start();
 	if($_SESSION["user_id"])
 	{	
-		$name = $_POST["name"];
-		$number = $_POST["number"];
-		$start = $_POST["start"];
-		$deadline = $_POST["deadline"];
-
+		$name = $_POST["teamName"];
+		$idProjekat = $_POST["idProjekat"];
 		
 		$connection = new mysqli("localhost", "root","", "projekat");
 		
 		if($connection ->connect_error)
 			die("Connection fail".$connection->connect_error);
 			
-		$sql = "INSERT INTO projekat (naziv, Broj_clanova, Datum_pocetka, Datum_kraja) values ('$name', '$number', '$start', '$deadline')";	
+		$sql = "INSERT INTO team (imeTima, idProjekat) values ('$name', '$idProjekat')";	
 		
 		if($connection->query($sql) === TRUE) {
-			header("location: index.php?selected=project");
+			header("location: index.php?selected=team");
 		}
 		else {
-			header("Refresh:2; url=index.php?selected=project");
+			header("Refresh:2; url=index.php?selected=team");
 			die("Neuspesno dodavanje");
 		}
 	}

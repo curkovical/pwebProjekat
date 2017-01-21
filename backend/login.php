@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-
+<?php
+	session_start();
+?>
 <html >
 <head>
   <meta charset="UTF-8">
   <title>Admin Login</title>
   
   
-  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href="css/bootstrap.min.css">
 
-      <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   
 </head>
@@ -28,11 +30,15 @@
 				if($connection ->connect_error)
 					die("Failed to connect to database".$connection->connect_error);
 					
-				$sql = "Select * from administracija where username = '".$user."' and password ='".$pass."'";
+				$sql = "Select adminId, username from administracija where username = '".$user."' and password ='".$pass."'";
 				$result = $connection->query($sql);
 				
 				if($result->num_rows == 1)
 				{
+					$row = $result->fetch_assoc();
+					$_SESSION["user_id"] = $row["adminId"];
+					$_SESSION["user_name"] = $row["username"];
+					
 					header("location: index.php?selected=client");	
 				}
 				else
