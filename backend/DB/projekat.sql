@@ -230,7 +230,7 @@ ALTER TABLE `administracija`
 -- AUTO_INCREMENT for table `cv`
 --
 ALTER TABLE `cv`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `klijent`
 --
@@ -240,7 +240,7 @@ ALTER TABLE `klijent`
 -- AUTO_INCREMENT for table `kontakt`
 --
 ALTER TABLE `kontakt`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `partner`
 --
