@@ -10,10 +10,10 @@
 		
 		$sql = "Delete from team where idTima = '$idTeam'";
 		if($connection->query($sql) === TRUE) {
-			header("location: index.php?selected=client");	
+			header("location: index.php?selected=team");	
 		}
 		else{
-			header("Refresh:5; url=index.php?selected=client");
+			header("Refresh:5; url=index.php?selected=team");
 			die("Neuspesno brisanje");
 		}
 	}
