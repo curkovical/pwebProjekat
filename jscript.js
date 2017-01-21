@@ -201,7 +201,7 @@ $(document).ready(function(){
 			
 			/* contact */
 			
-			$('form').submit(function(){
+			$('#form1').submit(function(){
 					
 					if($("input[name='nameF']").val() == ""){
 						$("#report").text("Name must be filled.");
@@ -231,7 +231,21 @@ $(document).ready(function(){
 						$("#report").text("Company name must be filled.");
 						$("input[name='companyF']").focus();
 						return false;
-					}			
+					}
 					
-				});			
+					$.ajax({
+						url: 'backend/contact.php',
+						type: 'POST',
+						data: $('#form1').serialize()											
+					});
+								
 		});
+		
+		$('#form2').submit(function(){
+			$.ajax({
+				url: 'backend/cvUpload.php',
+				type: 'POST',
+				data: $('#form2').serialize()											
+			});
+		});
+});
