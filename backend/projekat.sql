@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2017 at 01:42 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Jan 21, 2017 at 07:09 PM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -42,6 +42,26 @@ INSERT INTO `administracija` (`adminId`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cv`
+--
+
+CREATE TABLE `cv` (
+  `id` int(11) NOT NULL,
+  `ime_fajla` varchar(50) NOT NULL,
+  `velicina` int(11) NOT NULL,
+  `cv_fajl` mediumblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cv`
+--
+
+INSERT INTO `cv` (`id`, `ime_fajla`, `velicina`, `cv_fajl`) VALUES
+(8, 'bio.pdf', 34732, 0x5265736f75726365206964202333);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `klijent`
 --
 
@@ -55,6 +75,31 @@ CREATE TABLE `klijent` (
   `Zemlja` varchar(45) DEFAULT NULL,
   `idProjekat` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kontakt`
+--
+
+CREATE TABLE `kontakt` (
+  `id` int(11) NOT NULL,
+  `kategorija` varchar(30) NOT NULL,
+  `ime` varchar(60) NOT NULL,
+  `naslov` varchar(100) DEFAULT NULL,
+  `kompanija` varchar(60) NOT NULL,
+  `telefon` varchar(30) DEFAULT NULL,
+  `email` varchar(30) NOT NULL,
+  `poruka` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kontakt`
+--
+
+INSERT INTO `kontakt` (`id`, `kategorija`, `ime`, `naslov`, `kompanija`, `telefon`, `email`, `poruka`) VALUES
+(4, '1', 'Ime', '', 'Kompanija', '', 'hh@yahoo.com', 'poruka tekstualni sadrzaj'),
+(5, '1', 'Ime i prezime', '', 'Kompanija22', '', 'hh@yahoo.com', 'Druga poruka\r\n');
 
 -- --------------------------------------------------------
 
@@ -127,11 +172,23 @@ ALTER TABLE `administracija`
   ADD PRIMARY KEY (`adminId`);
 
 --
+-- Indexes for table `cv`
+--
+ALTER TABLE `cv`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `klijent`
 --
 ALTER TABLE `klijent`
   ADD PRIMARY KEY (`idKlijent`),
   ADD KEY `idProjekat` (`idProjekat`);
+
+--
+-- Indexes for table `kontakt`
+--
+ALTER TABLE `kontakt`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `partner`
@@ -168,25 +225,35 @@ ALTER TABLE `zaposleni`
 ALTER TABLE `administracija`
   MODIFY `adminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `cv`
+--
+ALTER TABLE `cv`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
 -- AUTO_INCREMENT for table `klijent`
 --
 ALTER TABLE `klijent`
-  MODIFY `idKlijent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idKlijent` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `kontakt`
+--
+ALTER TABLE `kontakt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 --
 -- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
-  MODIFY `idPartner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idPartner` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `projekat`
 --
 ALTER TABLE `projekat`
-  MODIFY `idProjekat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idProjekat` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `zaposleni`
 --
 ALTER TABLE `zaposleni`
-  MODIFY `idZaposleni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idZaposleni` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
