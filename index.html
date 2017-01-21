@@ -10,7 +10,9 @@
 <body>	
   <div id="main">		
 		<div id='header'>
-		
+		<div id= 'login'>							
+				<p><a href="backend/login.php">login</a></p>
+		</div>
 		<div id='title'>Company Name</div>		
 		</div>
     
@@ -187,9 +189,13 @@
 					<li>Your wishes - your Motivation letter (20 points)</li><br/>
 					<li>Your methods - a homework assignment (70 points)</li><br/>
 					</ol><br/><br/><br/>
-					After we get your curriculum vitae and your motivation letter, we will send you an assignment suitable for your desired position. So you don't have to "write how you would achieve something", but you can also "demonstrate it". Only after receiving the homework assignment will we make further decisions.<br/><br/><br/><br/>
+					After we get your curriculum vitae and your motivation letter, we will send you an assignment suitable for your desired position. So you don't have to "write how you would achieve something", but you can also "demonstrate it". Only after receiving the homework assignment will we make further decisions.<br/><br/><br/>
 					
-				
+					<form action='backend/cvUpload.php' method = 'post' id='form2' enctype="multipart/form-data">
+						<input type = 'file' name='cvUpload' id='cvUpload' accept = 'application/pdf' class='btn'>
+						<input type = 'submit' name = 'submit' value = "Send" class='btn'>
+					</form>
+					
 				
 					
 				</td>
@@ -199,16 +205,17 @@
 			
 			<div id='cont' class='invisible'>
 				
-				<form action='' 
-					method='get' 
+				<form action='/backend/contact.php' 
+					method='post' 
 					name='f' 
-					onsubmit='return provera()'>
+					onsubmit='return provera()'
+					id='form1'>
 					<table>
 						<tr>
 						<td>
 						*Message category:</td>
 						<td>
-						<select name='mCategory' class='nButWid'>						
+						<select id='categoryF' name='categoryF' class='nButWid'>						
 						<option value='1'>General Information </option>
 						<option value='2'>Request a proposal </option>
 						<option value='3'>Recruiting </option>
@@ -216,20 +223,20 @@
 						</select>
 						</td></tr>
 						<tr><td>*Name:</td>
-						<td><input name='nameF' type='text' class='nButWid'/></td></tr>
+						<td><input id = 'nameF' name='nameF' type='text' class='nButWid'/></td></tr>
 						<tr><td>	Title:</td>
-						<td><input name='titleF' type='text' class='nButWid'/></td></tr>
+						<td><input id='titleF' name='titleF' type='text' class='nButWid'/></td></tr>
 						<tr><td>*Company:</td>
-						<td><input name='companyF' type='text' class='nButWid'/></td></tr>
+						<td><input id='companyF' name='companyF' type='text' class='nButWid'/></td></tr>
 						<tr><td>Telephone:</td>
-						<td><input name='telephoneF' type='text' class='nButWid'/></td></tr>
+						<td><input id='telephoneF' name='telephoneF' type='text' class='nButWid'/></td></tr>
 						<tr><td>*E-mail:</td>
-						<td><input name='emailF' type='text' class='nButWid'/></td></tr>
+						<td><input id='emailF' name='emailF' type='text' class='nButWid'/></td></tr>
 						<tr><td>Message:</td>
-						<td><textarea name='areaF' class='nButWid'></textarea></td></tr>			
+						<td><textarea id='areaF' name='areaF' class='nButWid'></textarea></td></tr>			
 						<tr><td></td><td><p id='report' class='nButWid'></p></td></tr>
 					
-						<tr><td></td><td id='submiTd'><input class='butWid' type='submit' value='SEND'/></td></tr>
+						<tr><td></td><td id='submiTd'><input class='butWid btn' type='submit' value='Send'/></td></tr>
 					</table>
 				</form>
 			</div>
