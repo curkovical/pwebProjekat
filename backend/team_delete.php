@@ -2,7 +2,7 @@
 	session_start();
 	if($_SESSION["user_id"])
 	{	
-		$idTeam = $_GET['idTeam'];
+		$idTeam = $_POST['idTeam'];
 		$connection = new mysqli("localhost", "root","", "projekat");
 		
 		if($connection ->connect_error)
